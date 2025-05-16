@@ -189,10 +189,13 @@ const scrollToCategory = (categoryId) => {
 
 onMounted(() => {
   const hash = window.location.hash.slice(1)
+  
   if (hash) {
-    activeCategory.value = hash
+    // 从 hash 中提取分类 ID
+    const categoryId = hash.split('#')[1] || hash
+    activeCategory.value = categoryId
     setTimeout(() => {
-      scrollToCategory(hash)
+      scrollToCategory(categoryId)
     }, 100)
   }
 })

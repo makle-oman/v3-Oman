@@ -4,7 +4,7 @@
       <div class="hero-content">
         <h1>探索千年乳香传奇</h1>
         <p>源自阿曼的奢华香氛，传承古老智慧的现代诠释</p>
-        <router-link to="/products" class="cta-button">探索产品</router-link>
+        <router-link to="/products#all" class="cta-button">探索产品</router-link>
       </div>
     </section>
 
