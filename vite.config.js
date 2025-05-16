@@ -3,15 +3,15 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
-  base: '/v3-Oman/', 
+  base: '/v3-Oman/',
   build: {
     outDir: 'docs',
     rollupOptions: {
       output: {
-        // 移除 manualChunks 配置
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]'
+        manualChunks: {
+          'vendor': ['vue', 'vue-router'],
+          'views': ['./src/views/HomeView.vue', './src/views/ProductsView.vue', './src/views/ProductDetailView.vue']
+        }
       }
     }
   },
