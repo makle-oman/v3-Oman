@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
-  base: '/v3-Oman/',
+  base: '/v3-Oman/', 
   build: {
     outDir: 'docs',
     rollupOptions: {
