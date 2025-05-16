@@ -3,9 +3,14 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
-  base: '/v3-Oman/', // 替换成你的仓库名
+  base: '/v3-Oman/',
   build: {
-    outDir: 'docs'
+    outDir: 'docs',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   },
   plugins: [vue()],
   resolve: {
